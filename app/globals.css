@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    /* Palestinian flag green as primary color */
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    /* Secondary colors */
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Muted colors */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    /* Accent colors */
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    /* Destructive colors - Palestinian flag red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border and input colors */
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 142.1 76.2% 36.3%;
+
+    /* Border radius */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Base colors for dark mode */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    /* Card colors for dark mode */
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    /* Popover colors for dark mode */
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Palestinian flag green as primary color for dark mode */
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+
+    /* Secondary colors for dark mode */
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Muted colors for dark mode */
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    /* Accent colors for dark mode */
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive colors for dark mode - Palestinian flag red */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border and input colors for dark mode */
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Arabic font for duas and Arabic text */
+.font-arabic {
+  font-family: "Traditional Arabic", "Scheherazade New", serif;
+}
+
+/* Palestinian flag gradient */
+.bg-palestine-gradient {
+  background: linear-gradient(to right, #000000 25%, #ffffff 25%, #ffffff 50%, #10b981 50%, #10b981 75%, #ef4444 75%);
+}
+
+/* Custom animations */
+@keyframes pulse-palestine {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-pulse-palestine {
+  animation: pulse-palestine 2s infinite;
+}
